@@ -5,7 +5,7 @@
     <ProjectGuid>{FD378069-CB65-4C18-B3E2-4416001BF866}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <AssemblyName>SmokeSignal</AssemblyName>
+    <AssemblyName>Chocolate</AssemblyName>
     <OutputType>Exe</OutputType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -30,7 +30,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <DocumentationFile>SmokeSignal.xml</DocumentationFile>
+    <DocumentationFile>Chocolate.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Optimize>false</Optimize>
     <DebugType>full</DebugType>
@@ -41,7 +41,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <DocumentationFile>SmokeSignal.xml</DocumentationFile>
+    <DocumentationFile>Chocolate.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -96,6 +96,9 @@
   <ItemGroup>
     <None Include="My Project\app.manifest" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChocolateIcon.ico" />
+  </ItemGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
     <OptionCompare>Binary</OptionCompare>
@@ -103,8 +106,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>ChocolateIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Sub Main</StartupObject>
