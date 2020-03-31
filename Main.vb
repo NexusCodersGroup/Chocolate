@@ -16,9 +16,9 @@ Public Module Main
     'I would make that an arraylist to be simple pero no puedo sadly. Oh well.
 
     'SERVER SETUP
-    Public Const SERVER_NAME As String = "SmokeSignal Base Server"
-    Public Const SERVER_VERSION As String = "1.0"
-    Public Const HEADER_BACK_COLOR As ConsoleColor = ConsoleColor.DarkBlue
+    Public Const SERVER_NAME As String = "Toffee Server"
+    Public Const SERVER_VERSION As String = "Beta 1"
+    Public Const HEADER_BACK_COLOR As ConsoleColor = ConsoleColor.DarkRed
     Public Const HEADER_FONT_COLOR As ConsoleColor = ConsoleColor.White
 
     '(pls do not touch me)
@@ -77,6 +77,7 @@ Public Module Main
 
             'Check if we have a pending connection
             If tcpListener.Pending Then
+                ClearHeader()
 
                 'Accept it...
                 Dim networkStream As NetworkStream = New NetworkStream(tcpListener.AcceptSocket())
@@ -120,6 +121,10 @@ Public Module Main
         CenterText(SERVER_NAME + " [Version " & SERVER_VERSION & "] | Running on SmokeSignal V" & SMOKESIGNAL_VERSION)
         SetPos(0, 1)
         CenterText(Extensions.Length & " Extension(s) loaded | Listening on " & IP & ":" & Port & " ")
+    End Sub
+
+    Public Sub ClearHeader()
+        Box(ConsoleColor.Black, 120, 2, 0, 0)
     End Sub
 
 
