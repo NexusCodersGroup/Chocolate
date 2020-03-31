@@ -16,7 +16,7 @@ Public Module Main
     'I would make that an arraylist to be simple pero no puedo sadly. Oh well.
 
     'SERVER SETUP
-    Public Const SERVER_NAME As String = "Toffee Server"
+    Public Const SERVER_NAME As String = "Chocolate"
     Public Const SERVER_VERSION As String = "Beta 1"
     Public Const HEADER_BACK_COLOR As ConsoleColor = ConsoleColor.DarkRed
     Public Const HEADER_FONT_COLOR As ConsoleColor = ConsoleColor.White
