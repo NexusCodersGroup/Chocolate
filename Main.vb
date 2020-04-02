@@ -22,7 +22,7 @@ Public Module Main
     Public Const HEADER_FONT_COLOR As ConsoleColor = ConsoleColor.White
 
     '(pls do not touch me)
-    Public Const SMOKESIGNAL_VERSION As String = "6.0"
+    Public Const SMOKESIGNAL_VERSION As String = "6.0.1"
 
     Public Sub RegisterAllExtensions()
         ReDim Extensions(0) 'Redim the Extensions array to the size of the number of extensions you want.
@@ -72,8 +72,10 @@ Public Module Main
         ToConsole("Waiting for connection...", ConsoleColor.Yellow)
         DrawHeader()
 
+        Dim Wait As Boolean = True
         'The bulk loop
         While True
+            Wait = True
 
             'Check if we have a pending connection
             If tcpListener.Pending Then
@@ -98,6 +100,7 @@ Public Module Main
                 'Return to the waiting state
                 ToConsole("Waiting for connection...", ConsoleColor.Yellow)
                 DrawHeader()
+                Wait = False
             End If
 
             'Tick each time we can.
@@ -109,7 +112,7 @@ Public Module Main
             Spinner(Console.CursorLeft, Console.CursorTop)
 
             'Wait for another go around
-            Sleep(1000)
+            If Wait Then Sleep(100)
 
         End While
     End Sub
